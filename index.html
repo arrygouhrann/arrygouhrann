@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #a777e3;
+            white-space: nowrap;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #a777e3 }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold">WebDev Portfolio</div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about" class="hover:text-gray-200 transition">About</a></li>
+                        <li><a href="#skills" class="hover:text-gray-200 transition">Skills</a></li>
+                        <li><a href="#experience" class="hover:text-gray-200 transition">Experience</a></li>
+                        <li><a href="#contact" class="hover:text-gray-200 transition">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#about" class="hover:text-gray-200 transition">About</a></li>
+                    <li><a href="#skills" class="hover:text-gray-200 transition">Skills</a></li>
+                    <li><a href="#experience" class="hover:text-gray-200 transition">Experience</a></li>
+                    <li><a href="#contact" class="hover:text-gray-200 transition">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm a <span class="typewriter">Web Developer</span></h1>
+            <p class="text-xl md:text-2xl mb-8">Specializing in full-stack development with modern web technologies</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Hire Me</a>
+                <a href="#skills" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition">My Skills</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="rounded-full overflow-hidden border-4 border-purple-500 w-64 h-64">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/520ab5ef-b20f-42f4-a805-7bb647c84dbb.png" alt="Professional developer portrait with glasses and modern office background" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg mb-4">I'm a passionate web developer with 3 years of professional experience in crafting responsive, user-friendly websites and applications.</p>
+                    <p class="text-lg mb-4">My journey in web development began with front-end technologies and gradually expanded to full-stack development. I enjoy solving complex problems and creating efficient, scalable solutions.</p>
+                    <p class="text-lg mb-6">Currently, I'm expanding my expertise into advanced graphics programming and blockchain technologies while continuing to refine my web development skills.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-700 transition">Contact Me</a>
+                        <a href="https://github.com/" class="border-2 border-purple-600 text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-50 transition">My GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Core Web Development -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Core Web Development</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> PHP (3+ years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> JavaScript (3+ years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> jQuery (3+ years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> HTML5 & CSS3 (3+ years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bootstrap (3+ years)</li>
+                    </ul>
+                </div>
+                
+                <!-- Frameworks & Libraries -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Frameworks & Libraries</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Laravel (2 years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> CodeIgniter (2 years)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Vue.js (1 year)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> React (1 year)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tailwind CSS (1 year)</li>
+                    </ul>
+                </div>
+                
+                <!-- Backend & Advanced Tech -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Backend & Advanced</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Node.js (1 year)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> JavaEE (1 year)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Three.js (Basic)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> OpenGL (Basic)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> AI Tools (ChatGPT, Cursor IDE)</li>
+                    </ul>
+                </div>
+                
+                <!-- Learning -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Currently Learning</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-book text-blue-500 mr-2"></i> Vulkan</li>
+                        <li class="flex items-center"><i class="fas fa-book text-blue-500 mr-2"></i> CUDA</li>
+                        <li class="flex items-center"><i class="fas fa-book text-blue-500 mr-2"></i> Blockchain</li>
+                        <li class="flex items-center"><i class="fas fa-book text-blue-500 mr-2"></i> OpenCL</li>
+                    </ul>
+                </div>
+                
+                <!-- Other Skills -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Development Tools</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fas fa-tools text-yellow-500 mr-2"></i> Git & GitHub</li>
+                        <li class="flex items-center"><i class="fas fa-tools text-yellow-500 mr-2"></i> Docker</li>
+                        <li class="flex items-center"><i class="fas fa-tools text-yellow-500 mr-2"></i> VS Code</li>
+                        <li class="flex items-center"><i class="fas fa-tools text-yellow-500 mr-2"></i> CI/CD Pipelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-2">Freelance Web Developer</h3>
+                    <p class="text-gray-600 mb-2">Present</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Developing custom websites and web applications for clients across various industries</li>
+                        <li>Implementing responsive designs and ensuring cross-browser compatibility</li>
+                        <li>Building PHP-based solutions using Laravel and CodeIgniter frameworks</li>
+                        <li>Creating interactive front-end experiences with JavaScript and modern frameworks</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-2">Web Development Expertise</h3>
+                    <p class="text-gray-600 mb-2">3+ Years Experience</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Extensive experience with PHP, JavaScript, and related web technologies</li>
+                        <li>Proficient in both front-end and back-end development</li>
+                        <li>Experience working with databases and API integrations</li>
+                        <li>Knowledge of modern development tools and workflows</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-2">Emerging Technologies</h3>
+                    <p class="text-gray-600 mb-2">Ongoing Expansion</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Exploring advanced graphics programming with Vulkan, OpenGL, and Three.js</li>
+                        <li>Learning parallel computing with CUDA and OpenCL</li>
+                        <li>Studying blockchain technology and its applications</li>
+                        <li>Incorporating AI tools into development workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8">
+                    <form id="contactForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/arryfreelancer" class="hover:text-purple-400 transition" aria-label="GitHub">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+<!--                 <a href="https://linkedin.com/" class="hover:text-purple-400 transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://twitter.com/" class="hover:text-purple-400 transition" aria-label="Twitter">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="mailto:example@example.com" class="hover:text-purple-400 transition" aria-label="Email">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a> -->
+            </div>
+            <p>&copy; <span id="current-year"></span> Professional Web Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition hidden" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handling (for demo purposes)
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to a server
+            console.log({ name, email, subject, message });
+            
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
